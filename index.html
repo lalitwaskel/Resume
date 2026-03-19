@@ -1,46 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Developer Resume</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background: #4CAF50; color: white; padding: 10px 0; text-align: center; }
-        .container { width: 80%; margin: auto; padding: 20px; }
-        section { margin-bottom: 20px; }
-        h2 { color: #333; }
-        .photo { float: right; margin-left: 20px; }
-        .projects, .qualifications { clear: both; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: #fff;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-<header>
-    <h1>Game Developer Resume</h1>
-</header>
-<div class="container">
-    <section>
-        <img class="photo" src="your-photo-url.jpg" alt="Your Photo" width="150">
-        <h2>Name: Your Name</h2>
-        <p>Email: your-email@example.com</p>
-        <p>Phone: (123) 456-7890</p>
-    </section>
-    <section class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Project 1:</strong> Description of project 1.</li>
-            <li><strong>Project 2:</strong> Description of project 2.</li>
-            <li><strong>Project 3:</strong> Description of project 3.</li>
-        </ul>
-    </section>
-    <section class="qualifications">
-        <h2>Qualifications</h2>
-        <ul>
-            <li>Qualification 1</li>
-            <li>Qualification 2</li>
-            <li>Qualification 3</li>
-        </ul>
-    </section>
-</div>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I’m [Your Name], a [Your Role, e.g. Web Developer/Designer]. I love building creative and functional websites.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Project One</h3>
+        <p>Description of your project.</p>
+      </div>
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>Description of your project.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: yourname@example.com</p>
+    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 My Portfolio</p>
+  </footer>
 </body>
 </html>
