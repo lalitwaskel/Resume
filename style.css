@@ -1,30 +1,253 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0a0f1c;
+    color: white;
+}
+
+/* ================= NAVBAR ================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #0f1629;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #00ffb3;
+    font-size: 14px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #00ffb3;
+}
+
+/* ================= HERO ================= */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    flex-wrap: wrap;
+}
+
+.left {
+    max-width: 500px;
+}
+
+.left h1 {
+    font-size: 45px;
+}
+
+.left span,
+.highlight {
+    color: #00ffb3;
+}
+
+.left p {
+    margin: 20px 0;
+    color: #aaa;
+}
+
+/* ================= BUTTONS ================= */
+.buttons a {
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hire Me */
+.btn {
+    border: 2px solid #00ffb3;
+    color: #00ffb3;
+}
+
+/* Resume */
 .resume {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-  color: #333;
+    border: 2px solid #00ffb3;
+    color: #00ffb3;
 }
 
-.header {
-  text-align: center;
-  background-color: #4CAF50;
-  color: white;
-  padding: 15px;
+/* LinkedIn (Blue) */
+.linkedin {
+    border: 2px solid #0A66C2;
+    color: #0A66C2;
 }
 
-.section {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Glow Hover Effects */
+.btn:hover,
+.resume:hover {
+    background: #00ffb3;
+    color: black;
+    box-shadow: 0 0 15px #00ffb3, 0 0 30px #00ffb3;
+    transform: scale(1.08);
 }
 
-.section h2 {
-  color: #4CAF50;
+.linkedin:hover {
+    background: #0A66C2;
+    color: white;
+    box-shadow: 0 0 15px #0A66C2, 0 0 30px #0A66C2;
+    transform: scale(1.08);
 }
 
-.footer {
-  text-align: center;
-  font-size: 12px;
-  color: #777;
-  margin-top: 20px;
+/* Shine Animation */
+.btn::before,
+.resume::before,
+.linkedin::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.btn::before,
+.resume::before {
+    background: linear-gradient(120deg, transparent, #00ffb3, transparent);
+}
+
+.linkedin::before {
+    background: linear-gradient(120deg, transparent, #0A66C2, transparent);
+}
+
+.btn:hover::before,
+.resume:hover::before,
+.linkedin:hover::before {
+    left: 100%;
+}
+
+/* ================= IMAGE ================= */
+.image-box {
+    border: 3px solid #00ffb3;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0 0 20px #00ffb3;
+}
+
+.image-box img {
+    width: 280px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* ================= SECTIONS ================= */
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* ================= ABOUT ================= */
+.about {
+    display: flex;
+    justify-content: center;
+}
+
+.about-box {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    backdrop-filter: blur(10px);
+}
+
+/* ================= PROJECTS ================= */
+.project-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background: #111a2e;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: #00ffb3;
+    color: black;
+    box-shadow: 0 0 20px #00ffb3;
+}
+
+/* ================= CONTACT ================= */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #00ffb3;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-box img {
+        width: 220px;
+    }
 }
