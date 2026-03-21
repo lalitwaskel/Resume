@@ -82,7 +82,7 @@ nav a:hover {
 /* ================= BUTTONS ================= */
 .buttons a {
     padding: 10px 20px;
-    margin-right: 10px;
+    margin: 5px;
     text-decoration: none;
     display: inline-block;
     border-radius: 6px;
@@ -91,25 +91,20 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* Hire Me */
-.btn {
-    border: 2px solid #00ffb3;
-    color: #00ffb3;
-}
-
-/* Resume */
+/* Hire Me + Resume */
+.btn,
 .resume {
     border: 2px solid #00ffb3;
     color: #00ffb3;
 }
 
-/* LinkedIn (Blue) */
+/* LinkedIn */
 .linkedin {
     border: 2px solid #0A66C2;
     color: #0A66C2;
 }
 
-/* Glow Hover Effects */
+/* Glow Hover */
 .btn:hover,
 .resume:hover {
     background: #00ffb3;
@@ -125,7 +120,7 @@ nav a:hover {
     transform: scale(1.08);
 }
 
-/* Shine Animation */
+/* Shine Effect */
 .btn::before,
 .resume::before,
 .linkedin::before {
@@ -190,12 +185,13 @@ section {
 /* ================= PROJECTS ================= */
 .project-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 30px;
 }
 
+/* OLD CARDS (optional backup) */
 .card {
     background: #111a2e;
     padding: 20px;
@@ -211,6 +207,33 @@ section {
     background: #00ffb3;
     color: black;
     box-shadow: 0 0 20px #00ffb3;
+}
+
+/* NEW PROJECT CARDS */
+.project-card {
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    width: 320px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,255,200,0.2);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00ffb3;
+}
+
+.project-card h3 {
+    color: #00ffcc;
+}
+
+.project-card iframe {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0;
+    border-radius: 10px;
 }
 
 /* ================= CONTACT ================= */
