@@ -24,6 +24,7 @@ header {
     background: #0f1629;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -80,6 +81,10 @@ nav a:hover {
 }
 
 /* ================= BUTTONS ================= */
+.buttons {
+    margin-top: 15px;
+}
+
 .buttons a {
     padding: 10px 20px;
     margin: 5px;
@@ -91,8 +96,13 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* Hire Me + Resume */
-.btn,
+/* Hire Me + Play Buttons */
+.btn {
+    border: 2px solid #00ffb3;
+    color: #00ffb3;
+}
+
+/* Resume */
 .resume {
     border: 2px solid #00ffb3;
     color: #00ffb3;
@@ -104,7 +114,7 @@ nav a:hover {
     color: #0A66C2;
 }
 
-/* Glow Hover */
+/* Hover Glow */
 .btn:hover,
 .resume:hover {
     background: #00ffb3;
@@ -185,31 +195,12 @@ section {
 /* ================= PROJECTS ================= */
 .project-container {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 30px;
 }
 
-/* OLD CARDS (optional backup) */
-.card {
-    background: #111a2e;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px) scale(1.05);
-    background: #00ffb3;
-    color: black;
-    box-shadow: 0 0 20px #00ffb3;
-}
-
-/* NEW PROJECT CARDS */
 .project-card {
     background: #111;
     padding: 20px;
@@ -222,11 +213,16 @@ section {
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px #00ffb3;
+    box-shadow: 0 0 25px #00ffb3;
 }
 
 .project-card h3 {
     color: #00ffcc;
+}
+
+.project-card p {
+    margin: 10px 0;
+    color: #aaa;
 }
 
 .project-card iframe {
@@ -234,32 +230,47 @@ section {
     height: 200px;
     margin: 10px 0;
     border-radius: 10px;
+    border: none;
 }
 
 /* ================= CONTACT ================= */
+.contact h2 {
+    margin-bottom: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     max-width: 400px;
     margin: auto;
 }
 
-input, textarea {
-    padding: 10px;
+form input,
+form textarea {
+    padding: 12px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    background: #111;
+    color: white;
+    border: 1px solid #00ffb3;
+    outline: none;
 }
 
-button {
+form button {
+    padding: 12px;
+    border: none;
     background: #00ffb3;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
+    color: black;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00ffb3;
 }
 
-button:hover {
+form button:hover {
+    box-shadow: 0 0 20px #00ffb3;
     transform: scale(1.05);
 }
 
